@@ -18,7 +18,7 @@ class Home extends React.Component {
   	render() {
     	return (
 	    	<div>
-	    		<p>Home</p>
+	    		<p className="red">Home</p>
 	    	</div>
     	)
   	}

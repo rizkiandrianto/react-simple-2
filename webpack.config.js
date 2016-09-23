@@ -7,9 +7,9 @@ module.exports = {
     './app/router.js'
   ],
   output: {
-    path: '/',
+    path: __dirname,
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: './'
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

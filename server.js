@@ -9,10 +9,10 @@ var app = express();
 
 var compiler = webpack(config);
 
-app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.publicPath}));
+app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.publicPath, hot: true}));
 app.use(webpackHotMiddleware(compiler));
 
-app.use(express.static('./dist'));
+app.use(express.static('./'));
 
 app.use('/', function (req, res) {
     res.sendFile(path.resolve('index.html'));
