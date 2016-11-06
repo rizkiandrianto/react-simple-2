@@ -4,10 +4,22 @@
     <meta charset="utf-8">
     <title>Simpe React</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link href="/dist/assets/styles.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
-    <script src="bundle.js"></script>
+    <div id="app">
+      <div class="main-loader">
+        <div class="sk-folding-cube">
+          <div class="sk-cube1 sk-cube"></div>
+          <div class="sk-cube2 sk-cube"></div>
+          <div class="sk-cube4 sk-cube"></div>
+          <div class="sk-cube3 sk-cube"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Comment line bellow for production build -->
+    <script src="/bundle.js"></script>
+    <!-- Uncomment line bellow for production build
+    <script src="/dist/bundle.min.js"></script>-->
   </body>
 </html>

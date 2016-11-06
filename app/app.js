@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, useRouterHistory, Link } from 'react-router';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer  } from 'react-router-bootstrap';
-
+import '../dist/assets/scss/styles.scss';
 
 class App extends Component {
 	componentWillMount() {
@@ -18,7 +18,7 @@ class App extends Component {
 				<Navbar>
 				    <Navbar.Header>
 				      <Navbar.Brand>
-				        <a href="#">React-Bootstraps</a>
+				        <a href="#">Simple React Boilerplate</a>
 				      </Navbar.Brand>
 				    </Navbar.Header>
 				    <Nav>

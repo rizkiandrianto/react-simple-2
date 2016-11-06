@@ -17,9 +17,10 @@ class Home extends React.Component {
 	}
   	render() {
     	return (
-	    	<div>
-	    		<p className="red">Home</p>
-	    	</div>
+	    	<page>
+	    		<h1 className="red">Home</h1>
+					<p>Welcome to React Simple Boilerplate, this boilerplate was made by Rizki Andrianto. This is a simple home page.</p>
+	    	</page>
     	)
   	}
 }
