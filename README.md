@@ -13,10 +13,10 @@ Made it with frustration of ReactJS :joy:
 3. `npm start` or `webpack-dev-server --hot --progress --colors`
 
 ### How to Build for Production
-1. `npm run build`
-2. copy `dist` folder and index only to your server. (If you decide to use Apache or Nginx server, you don't need steps 3 and the next)
-3. copy server.prod.js to your server (if you want to serve this project with node server -- pm2 for example)
-4. uncomment script `build.min.js` and comment the `build.js` line in `index.html`
+1. `npm run build` to build into 1 file `build.js` and `build.min.js`.
+2. Uncomment script `build.min.js` and comment the `build.js` line in `index.html`
+3. If you decide to use Apache or Nginx server, copy `dist` folder only to your server. (If you decide to this node server, you don't need steps 3)
+4. run `nodemon (or node or pm2) server/server.prod.js`
 
 ### How to Reproduce this project, (init based on http://bit.ly/react-es6-webpack-babel)
 1. Install Webpack Dev Server globaly : `npm install -g webpack-dev-server`

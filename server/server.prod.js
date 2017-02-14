@@ -14,9 +14,9 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(express.static('./', { maxAge: 86400000 })); //86400000 means 1 day in miliseconds
+app.use(express.static('./dist/', { maxAge: 86400000 })); //86400000 means 1 day in miliseconds
 app.get('*',function(req,res){
-  res.sendFile(path.resolve(__dirname + '/dist/index.html'));
+  res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
 });
 
 app.listen(port,function(err){
