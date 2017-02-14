@@ -1,13 +1,17 @@
-import App from './app';
-import Home from './page/home';
-import NotFound from './page/404';
+import App from 'components/layouts/layout1/app';
+import Home from 'pages/home';
+import NotFound from 'pages/404';
 
 import {render} from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute, useRouterHistory } from 'react-router';
 import React, { Component } from 'react';
 
-import { createHashHistory } from 'history'
-const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
+// import { createHashHistory } from 'history'
+// const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
+
+import {Provider} from 'react-redux';
+import {configureStore, initialState} from 'redux/stores';
+let store = configureStore(initialState);
 
 class Routes extends Component{
   /**
@@ -24,12 +28,14 @@ class Routes extends Component{
    */
   render () {
     return (
-      <Router history={browserHistory}>
-        <Route path="/" component={App}>
-        	<IndexRoute component={Home}/>
-          <Route path="*" component={NotFound}/>
-        </Route>
-      </Router>
+      <Provider store={store}>
+        <Router history={browserHistory}>
+          <Route path="/" component={App}>
+          	<IndexRoute component={Home}/>
+            <Route path="*" component={NotFound}/>
+          </Route>
+        </Router>
+      </Provider>
     )
   }
 }

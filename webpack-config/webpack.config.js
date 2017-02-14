@@ -38,5 +38,9 @@ module.exports = {
   },
   externals: {
     'config': JSON.stringify(require('../env/env.json'))
-  }
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.css'],
+    modulesDirectories: ['node_modules', 'app', 'dist/assets']
+  },
 }
