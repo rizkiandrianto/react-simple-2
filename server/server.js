@@ -18,7 +18,7 @@ app.use('/', function (req, res) {
     res.sendFile(path.resolve('dist/index.html'));
 });
 
-var port = 3009;
+var port = 3000;
 
 app.listen(port, function(error) {
   if (error) throw error;

@@ -10,7 +10,7 @@ class Home extends Component {
 		this.changeState = this.changeState.bind(this);
 	}
 	changeState(){
-		this.props.setGeneral('test', !this.props.test)
+		this.props.setGeneral('test', !this.props.test);
 	}
 	render() {
   	return (
