@@ -3,5 +3,5 @@ export function setGeneral(address, value) {
     type: "GENERAL",
     key: address,
     value: value
-  }
+  };
 }
