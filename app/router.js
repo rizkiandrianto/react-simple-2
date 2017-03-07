@@ -38,7 +38,7 @@ class Routes extends Component{
           </Route>
         </Router>
       </Provider>
-    )
+    );
   }
 }
 

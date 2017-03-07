@@ -19,6 +19,13 @@ module.exports = {
     new ExtractTextPlugin('style.css',{allChunks: true})
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+    ],
     loaders: [
       {
         test: /\.js$/,
@@ -42,5 +49,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx', '.css'],
     modulesDirectories: ['node_modules', 'app', 'dist/assets']
+  },
+  eslint: {
+    configFile: './.eslintrc'
   },
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {render} from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute, useRouterHistory, Link } from 'react-router';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
@@ -39,8 +39,12 @@ class App extends Component {
 					{this.props.children}
 				</div>
 			</component>
-		)
+		);
 	}
 }
 
-export default App
+App.propTypes = {
+	children: PropTypes.object
+};
+
+export default App;

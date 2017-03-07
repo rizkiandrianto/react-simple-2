@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import { Row } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {setGeneral} from 'redux/actions';
 
-class Home extends React.Component {
+class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.changeState = this.changeState.bind(this);
 	}
 	changeState(){
-		this.props.setGeneral('test', !this.props.test);
+		this.props.setGeneral('test', !this.props.test)
 	}
 	render() {
   	return (
@@ -20,14 +20,19 @@ class Home extends React.Component {
 				<p>And this is test of redux, the button text will become the value of state <i>test</i> :</p>
 				<button onClick={this.changeState}>{this.props.test.toString()}</button>
     	</page>
-  	)
+  	);
 	}
 }
+
+Home.propTypes = {
+	test: PropTypes.bool,
+	setGeneral: PropTypes.func
+};
 
 export default connect((state)=>{
 	return {
 		test: state.test
-	}
+	};
 }, dispatch => bindActionCreators({
 	setGeneral
 }, dispatch))(Home);

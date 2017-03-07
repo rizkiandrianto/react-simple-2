@@ -7,7 +7,7 @@ class not_found extends React.Component {
 				<h1>404 Not Found</h1>
 				<p>Welcome to React Simple Boilerplate, this boilerplate was made by Rizki Andrianto. This is a simple 404 Page or Not Found Page.</p>
 			</page>
-		)
+		);
 	}
 }
 

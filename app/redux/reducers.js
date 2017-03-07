@@ -5,6 +5,6 @@ export default function reducer(state, action) {
         [action.key] : action.value
       });
     default:
-      return state
+      return state;
   }
 }
