@@ -1,5 +1,6 @@
 import App from 'components/layouts/layout1/app';
 import Home from 'pages/home';
+import About from 'pages/about';
 import NotFound from 'pages/404';
 
 import {render} from 'react-dom';
@@ -32,6 +33,7 @@ class Routes extends Component{
         <Router history={browserHistory}>
           <Route path="/" component={App}>
           	<IndexRoute component={Home}/>
+            <Route path="about" component={About}/>
             <Route path="*" component={NotFound}/>
           </Route>
         </Router>
